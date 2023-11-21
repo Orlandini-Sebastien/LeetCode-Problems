@@ -1,11 +1,10 @@
 function decodeMessage(key: string, message: string): string {
     const alphabet : string = "abcdefghijklmnopqrstuvwxyz";
-    const key1 : string = key.replaceAll(" ","");
     let decoder : any = {};
     let count :number =0;
-    for(let i=0;i<key1.length;i++){
-        if(!decoder[key1[i]]){
-            decoder[key1[i]]=alphabet[count];
+    for(let i=0;i<key.length;i++){
+        if(!decoder[key[i]] && key[i]!==" "){
+            decoder[key[i]]=alphabet[count];
             count++;
         }
     }
