@@ -6,4 +6,5 @@ function transpose(matrix: number[][]): number[][] {
         for (let j = 0; j < col; j++) 
             transpose[j][i] = matrix[i][j];
     return transpose;
+    
 };
